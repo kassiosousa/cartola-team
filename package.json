@@ -1,0 +1,60 @@
+{
+  "name": "boilerplate-react-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint --fix",
+      "yarn test"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest --no-watch -- --bail",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --max-warnings=0"
+  },
+  "dependencies": {
+    "atomize": "^1.0.28",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/coverage-c8": "^0.29.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.0",
+    "jsdom": "^21.1.0",
+    "lint-staged": "^13.1.2",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vitest": "^0.29.1"
+  }
+}
